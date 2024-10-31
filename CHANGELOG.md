@@ -2,13 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.1.0] - 2024-10-31
+
+### 🚀 Features
+
+- *(bash)* Script to display information about all active IPs on an interface(s)
 
 ### 📚 Documentation
 
 - *(roadmap)* Create roadmap for development
+- *(changelog)* Initialize changelog configuration
 
-### Build
+### 🚧 Build
 
 - App::ActiveIPs Initial Commit
 
