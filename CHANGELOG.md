@@ -1,6 +1,12 @@
-# Changelog
+# Changelog for App::ActiveIPs
 
 All notable changes to this project will be documented in this file.
+
+## [unreleased]
+
+### 📚 Documentation
+
+- *(changelog)* Update Changelog
 
 ## [0.1.0] - 2024-10-31
 
