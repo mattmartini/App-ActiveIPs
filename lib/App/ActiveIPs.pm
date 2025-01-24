@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; $VERSION = qv('0.0.3');
+use version; $VERSION = qv('0.2.0');
 
 # Other recommended modules (uncomment to use):
 #  use IO::Prompt;
@@ -26,7 +26,7 @@ App::ActiveIPs - [One line description of module's purpose here]
 
 =head1 VERSION
 
-This document describes App::ActiveIPs version 0.0.1
+This document describes App::ActiveIPs version 0.2.0
 
 
 =head1 SYNOPSIS
