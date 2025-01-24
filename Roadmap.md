@@ -46,4 +46,5 @@ Plans for the development of the App::ActiveIPs
 3. 
   - v3.0 - Parallel Pings via child processes  
 
-
+?? cache  
+?? filter
