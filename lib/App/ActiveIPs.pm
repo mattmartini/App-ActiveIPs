@@ -12,11 +12,9 @@ use version; our $VERSION = version->declare("v0.2.0");
 #  use Perl6::Slurp;
 #  use Perl6::Say;
 
-
 # Module implementation here
 
-
-1; # Magic true value required at end of module
+1;    # Magic true value required at end of module
 __END__
 
 =head1 NAME

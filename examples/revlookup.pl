@@ -31,7 +31,7 @@ Readonly my $VERSION => version->declare("v1.0.9");
 my $to255_re = qr<(?:[01]?\d\d?|2[0-4]\d|25[0-5])>;
 my $ip_re    = qr<^$to255_re(?:\.$to255_re){3}>;
 
-printf ("%s\n", '┌─────┤IPV4├─────┬────┤host├────┬─────┤domain├─────┐');
+printf( "%s\n", '┌─────┤IPV4├─────┬────┤host├────┬─────┤domain├─────┐' );
 
 while ( my $ip = <> ) {
     chomp $ip;
