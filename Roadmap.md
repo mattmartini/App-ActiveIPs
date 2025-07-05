@@ -44,7 +44,15 @@ Plans for the development of the App::ActiveIPs
   - v2.0 - IPv6
 
 3. 
-  - v3.0 - Parallel Pings via child processes  
+  - v3.0 - Parallel Pings via child processes  (number of processors)
 
-?? cache  for seen devices
+?? cache  for seen devices - added cached to front of list to scan first.
+report on cached no longer pingable, option to clear cache (auto clear after time).
+
 ?? filter
+
+
+fallback to pure perl if fping is not available. (warning on degraded performance)
+or do we need fping?
+
+
