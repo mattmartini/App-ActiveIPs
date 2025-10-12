@@ -4,6 +4,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
                NAME               => 'App::ActiveIPs',
+               DISTNAME           => 'App-ActiveIPs',
                AUTHOR             => 'Matt Martini <matt@imaginarywave.com>',
                VERSION_FROM       => 'lib/App/ActiveIPs.pm',
                ABSTRACT_FROM      => 'lib/App/ActiveIPs.pm',
@@ -11,6 +12,7 @@ WriteMakefile(
                MIN_PERL_VERSION   => '5.018',
                PL_FILES           => {},
                CONFIGURE_REQUIRES => { 'ExtUtils::MakeMaker' => 0, },
+               EXE_FILES          => ['bin/activeips'],
                PREREQ_PM          => {
                               'Test::More'      => 0,
                               'Carp'            => 0,
