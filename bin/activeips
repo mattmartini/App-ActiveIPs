@@ -1,0 +1,98 @@
+#!/usr/bin/env perl
+################################################################################
+##                                                                            ##
+##  activeips - find the active ips on the local network                      ##
+##                                                                            ##
+##  Author:    Matt Martini                                                   ##
+##                                                                            ##
+##  Created:   2025-10-12   v.0.2.8                                           ##
+##                                                                            ##
+##  Copyright © 2025  Matt Martini <matt.martini@imaginarywave.com>           ##
+##                                                                            ##
+################################################################################
+
+########################################
+#      Requirements and Packages       #
+########################################
+
+use MERM::Base::Syntax;
+
+use Getopt::Long;
+use Term::ANSIColor;
+
+use Data::Dumper;
+use Data::Printer class =>
+{ expand => 'all', show_methods => 'none', parents => 0 };
+
+Readonly my $PROGRAM => 'activeips';
+Readonly my $VERSION => version->declare("v0.2.8");
+
+########################################
+#      Define Global Variables         #
+########################################
+
+$Data::Dumper::Indent = 3;    # pretty print with array indices
+
+local $OUTPUT_AUTOFLUSH = 1;
+
+# Default config params
+my %config = (
+    bla   => '',    # Bla Bla Bla
+    ratio  => 0,     # Inode Ratio
+    debug  => 0,     # debugging
+    verbose   => 0,    # Verbose output
+    silent => 0      # do not print report on stdout
+    );
+
+
+########################################
+#            Main Program              #
+########################################
+
+process_args();
+
+
+exit(0);
+
+########################################
+#           Subroutines                #
+########################################
+sub process_args {
+
+  GetOptions( \%config, "size=s", "name=s", "vg=s",
+      "debug", "verbose+", "silent", "help|?",
+      "version" => sub { say "version: $VERSION"; exit(0); }, );
+
+# Sanity checks
+
+  usage() if ( $Getopt::Long::error > 0 || $config{ help } );
+
+  $config{ verbose }++ if ( $config{ debug } );
+
+  usage("You must specify a Bla.")
+    unless ( $config{ bla } );
+
+  return;
+
+}
+
+
+sub usage {
+  my $msg = shift || '';
+  print colored ( $msg, 'red' );
+  print <<"END_USAGE";
+
+Usage: $0 args
+         Arguments:
+         --bla        : bla bla bla
+         --debug      : Turn debugging on
+         --verbose    : Generate debugging info on stderr
+         --silent     : Do not print report on stdout
+         --help       : This helpful information.
+
+END_USAGE
+         exit(1);
+}
+
+
+# vim: ft=perl
