@@ -1,5 +1,9 @@
-;[test]
+[test]
 ;-L
 
 [start]
--PApp::ActiveIPs
+--blib
+-PTest2::V0
+-PDev::Util::Syntax
+--reload
+--job-count 8:2
