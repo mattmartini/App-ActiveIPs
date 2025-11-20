@@ -1,0 +1,40 @@
+# Ignore these files and dirs when building the MANIFEST
+
+# Version control
+\B\.git\b
+\B\.gitignore\b
+\.gitkeep$
+\.keep$
+\B\.svn\b
+\B\.cvsignore\b
+,v$
+\bRCS\b
+\bCVS\b
+
+# Makemaker generated files
+^MANIFEST\.
+^Makefile$
+^Makefile.old$
+^blib/
+^pm_to_blib$
+^MakeMaker-\d
+^MYMETA\.
+
+# Testing and coverage
+\B\.prove$
+^cover_db
+^covered
+^\.yath.rc
+\..*-yath-persist.json
+\.test_info
+
+# Finder artifacts
+\B\.DS_Store
+\.AppleDouble
+
+# Editor artifacts
+~$
+\.swp$
+
+# scratch files
+^scratch
